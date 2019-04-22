@@ -1,0 +1,21 @@
+---
+title: "Project2"
+author: "Harichandana Epuri"
+date: "8 October 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+data<-networkbatTX
+nrow(data)
+totalToken<-10^9*10^18
+
+removed<-data[(data$V4>totalToken),]
+nrow(removed)
+removed
+```
+
